@@ -17,5 +17,5 @@ def word_frequency(stream):
     return word_dict
 
 
-for (key, value) in sorted(word_frequency(sys.stdin.readlines()).items(), key=lambda x:(x[1], x[0]), reverse=True):
+for (key, value) in sorted(word_frequency(open("mbox-short.txt").readlines()).items(), key=lambda x:(x[1], x[0]), reverse=True):
     print(key + " = " + str(value))
